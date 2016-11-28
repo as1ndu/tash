@@ -1,18 +1,19 @@
 #!/bin/bash
-#https://github.com/as1ndu/tash 
-#Contact via DM https://twitter.com/as1ndu 
 
 OPTION1="Linux Mac-OS-X"
+
 echo What is  your operating system?
 select opt1 in $OPTION1; do
-        #[Choose the operating system]
+
+           #[Choose the operating system]
         if [ "$opt1" = "Linux" ]; then
             export OS=linux
 
             OPTION3="GPU-enabled  CPU-only"
             echo "b) Do you want the GPU enabled binary or only CPU support?"?
             select opt3 in $OPTION3; do
-                    
+
+            #[Decide between Linux GPU-enabled and CPU-only support]
                     if [ "$opt3" = "GPU-enabled" ]; then
                         export Processor=gpu
 
@@ -43,6 +44,9 @@ select opt1 in $OPTION1; do
 
                     elif [ "$opt3" = "CPU-only" ]; then
                         export Processor=cpu
+            #[End Decide between Linux GPU-enabled and CPU-only support]
+ 
+            #[Choose the Linux Python version]
                         echo What is  version of Python are you using?
                         OPTION3="Python2.7 Python3.4 Python3.5"
                         select opt3 in $OPTION3; do
@@ -59,7 +63,6 @@ select opt1 in $OPTION1; do
                             elif [ "$opt3" = "Python3.5" ]; then
                                 export PythonVersion=cp35-cp35m
                                 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
-                                sudo pip install --upgrade $TF_BINARY_URL
                                 exit
 
                             else
@@ -68,6 +71,7 @@ select opt1 in $OPTION1; do
                             fi
                         done
                         exit
+            #[End Choose the Linux Python version]
 
                     else
                     clear
@@ -78,7 +82,8 @@ select opt1 in $OPTION1; do
 
         elif [ "$opt1" = "Mac-OS-X" ]; then
              export OS=mac
-
+ 
+            #[Decide between Mac-OS-X  GPU-enabled and CPU-only support]
              OPTION3="GPU-enabled  CPU-only"
              echo "b) Do you want the GPU enabled binary or only CPU support?"?
              select opt3 in $OPTION3; do
@@ -113,7 +118,9 @@ select opt1 in $OPTION1; do
 
                     elif [ "$opt3" = "CPU-only" ]; then
                         export Processor=cpu
+            #[End Decide between Mac-OS-X GPU-enabled and CPU-only support]
 
+            #[Choose the Mac-OS-X Python version]
                         echo What is  version of Python are you using?
                         OPTION3="Python2.7 Python3.4 Python3.5"
                         select opt3 in $OPTION3; do
@@ -138,19 +145,21 @@ select opt1 in $OPTION1; do
                             fi
                         done
                         exit
+            #[End Choose the Mac-OS-X Python version]
 
                     else
                     clear
                     echo Bad entry, run the script again and enter 1, or 2.
                     fi
              done
+             
 
 
         else
         clear
         echo Bad entry, run the script again and enter 1, or 2.
         fi
-        #[End Choose the operating system]
+           #[End Choose the operating system]
 done
 
 
