@@ -1,4 +1,4 @@
 #(WIP) Tash: The easy and fast TensorFlow installation
 
-Install TensorFlow in one run 
+Install/upgrade TensorFlow in one run 
 
