@@ -1,7 +1,9 @@
 #!/bin/bash
+#Tash by as1ndu
 
 OPTION1="Linux Mac-OS-X"
 
+echo Tash: The easy, fast TensorFlow installation
 echo What is  your operating system?
 select opt1 in $OPTION1; do
 
