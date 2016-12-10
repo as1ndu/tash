@@ -132,19 +132,19 @@ select opt1 in $OPTION1; do
                         select opt3 in $OPTION3; do
                             if [ "$opt3" = "Python2.7" ]; then
                             echo This is Python2.7 
-                            export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                            export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-py2-none-any.whl
                             sudo pip install --upgrade $TF_BINARY_URL
                             exit
 
                             elif [ "$opt3" = "Python3.4" ]; then
                                 echo This is Python3.4
-                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc3-py2-none-any.whl
                                 sudo pip3 install --upgrade $TF_BINARY_URL
                                 exit
 
                             elif [ "$opt3" = "Python3.5" ]; then
                                 echo This is Python3.5
-                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-py3-none-any.whl
                                 sudo pip3 install --upgrade $TF_BINARY_URL
                                 exit
 
