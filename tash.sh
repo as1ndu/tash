@@ -1,5 +1,4 @@
 #!/bin/bash
-#Tash by as1ndu
 
 OPTION1="Linux Mac-OS-X"
 
