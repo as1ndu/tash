@@ -35,7 +35,7 @@ select opt1 in $OPTION1; do
 
                             elif [ "$opt3" = "Python3.5" ]; then
                                 export PythonVersion=cp35-cp35m
-                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.12.1-$PythonVersion-linux_x86_64.whl
                                 sudo pip3 install --upgrade $TF_BINARY_URL
                                 exit
 
@@ -56,19 +56,19 @@ select opt1 in $OPTION1; do
                         select opt3 in $OPTION3; do
                             if [ "$opt3" = "Python2.7" ]; then
                                export PythonVersion=cp27-none
-                               export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                               export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.12.1-$PythonVersion-linux_x86_64.whl
                                sudo pip install --upgrade $TF_BINARY_URL
                                exit
 
                             elif [ "$opt3" = "Python3.4" ]; then
                                 export PythonVersion=cp34-cp34m
-                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.12.1-$PythonVersion-linux_x86_64.whl
                                 sudo pip3 install --upgrade $TF_BINARY_URL
                                 exit
 
                             elif [ "$opt3" = "Python3.5" ]; then
                                 export PythonVersion=cp35-cp35m
-                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.11.0rc2-$PythonVersion-linux_x86_64.whl
+                                export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/$OS/$Processor/tensorflow-0.12.1-$PythonVersion-linux_x86_64.whl
                                 sudo pip3 install --upgrade $TF_BINARY_URL
                                 exit
 
