@@ -11,7 +11,7 @@ select opt1 in $OPTION1; do
             export OS=linux
 
             OPTION3="GPU-enabled  CPU-only"
-            echo "b) Do you want the GPU enabled binary or only CPU support?"?
+            echo "b) Do you want the GPU enabled binary or only CPU support?"
             select opt3 in $OPTION3; do
 
             #[Decide between Linux GPU-enabled and CPU-only support]
